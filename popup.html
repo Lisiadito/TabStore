@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Tab Store</title>
+    <style type="text/css">
+      body {
+        margin: 10px;
+        min-width:300px;
+      }
+
+      h1 {
+        font-size: 15px;
+      }
+
+      #container1 {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+      }
+      #container2 {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>    
+    <script src="popup.js"></script>
+  </head>
+
+  <body>
+    <h1>Tab Store</h1>
+    <div id="container1">
+      <span>Save Current Session</span>
+      <input type="text" id="sessionname" placeholder="Session Name">
+      <button id="savebtn" type="submit">Save</button>
+    </div>
+    <div id="container2">
+      <span>Restore Session</span>
+      <form action="/listSessions.html">
+        <input type="submit" value="List Saved Sessions" />
+      </form>
+      <!-- <button id="showsavedsessions">Show Saved Sessions</button> -->
+    </div>
+  </body>
+</html>

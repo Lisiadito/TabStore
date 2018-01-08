@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Tab Store</title>
+    <style type="text/css">
+      body {
+        margin: 10px;
+        min-width:300px;
+      }
+
+      h1 {
+        font-size: 15px;
+      }
+
+      #SessionList {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>   
+    <script src="listSessions.js"></script>
+    <script src="jquery-3.2.1.min.js"></script> 
+  </head>
+
+  <body>
+    <h1>Tab Store</h1>
+    <div>
+      <form action="/popup.html">
+        <input type="submit" value="Go back" />
+      </form>
+    </div>
+      <button id='test'>test</button>
+    <div id="SessionList">
+    </div>
+  </body>
+</html>

@@ -25,8 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let sessionName = document.getElementById('sessionname').value
     if(sessionName) {
       getAllUrls(sessionName) 
-    } else {
-      //dont know maybe an alert 
     }
   })
 })

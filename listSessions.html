@@ -14,11 +14,33 @@
         font-size: 20px;
       }
 
-      #SessionList {
-        align-items: center;
-        display: flex;
-        justify-content: space-between;
-      }
+    .wrapper {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 75px 75px;
+        grid-template-rows: 20px 20px 20px;
+    }
+
+    #restoreBtn {
+              /*RS / CS / RE / CE*/
+      grid-area: 2 / 1 / 3 / 2;
+    }
+
+    #list {
+              /*RS / CS / RE / CE*/
+      grid-area: 1 / 1 / 2 / 2;
+    }
+
+    #removeBtn {
+              /*RS / CS / RE / CE*/
+      grid-area: 2 / 2 / 3 / 3;
+    }
+
+    #popupForm {
+              /*RS / CS / RE / CE*/
+      grid-area: 3 / 1 / 4 / 2;
+    }
+
     </style>   
     
     <!-- ROBOTO FONT -->
@@ -30,17 +52,21 @@
 
   <body>
     <h1>Tab Store</h1>
-    <div>
-      <form action="/popup.html">
-        <input type="submit" value="Go back" />
-      </form>
-    </div>
-      <button id='restore'>Restore</button>
-      <button id='remove'>Delete</button>
-    <div>
-      <select id="SessionList">
-        
-      </select>
+    <div class="wrapper">
+      <div id="restoreBtn">
+        <button id='restore'>Restore</button>
+      </div>
+      <div id="removeBtn">
+        <button id='remove'>Delete</button>
+      </div>
+      <div id="list">
+        <select id="SessionList"></select>
+      </div>
+      <div id="popupForm">
+        <form action="/popup.html">
+          <button type="submit">Go back</button>
+        </form>
+      </div>
     </div>
   </body>
 </html>

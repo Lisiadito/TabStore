@@ -1,5 +1,5 @@
 function getAllUrls(sessionName) {
-  let queryInfo = {
+  const queryInfo = {
     currentWindow: true
   };
 
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let saveButton = document.getElementById('savebtn')
   
   saveButton.addEventListener('click', () => {
-    let sessionName = document.getElementById('sessionname').value
+    const sessionName = document.getElementById('sessionname').value
     if(sessionName) {
       getAllUrls(sessionName) 
     }

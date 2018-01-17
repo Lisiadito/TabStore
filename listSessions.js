@@ -26,18 +26,14 @@ function restoreSavedSession() {
   const sessionKey = session.options[session.selectedIndex].value;
   
   chrome.storage.sync.get(sessionKey, (sessionObj) => {
-    chrome.tabs.query({}, function (tabs) {
-      
-      for (let i = 0; i < tabs.length; i++) {
-        chrome.tabs.remove(tabs[i].id);
-      }
+    
+    const links = sessionObj[sessionKey]
+
+    chrome.tabs.query({currentWindow: true}, function (tabs) {
+      tabs.forEach(tab => chrome.tabs.remove(tab.id))
     })
 
-    const links = sessionObj[sessionKey]
-    
-    for(let link of links) {      
-      chrome.tabs.create({url:link})
-    }
+    links.forEach(link => chrome.tabs.create({active:false, url:link}))
   })
 }
 

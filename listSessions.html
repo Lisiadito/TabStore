@@ -9,7 +9,7 @@
         min-width:200px;
         min-height: 150px;
         font-family: 'Roboto', sans-serif;
-        background: linear-gradient(-45deg, #2f2f2f, #494949);
+        background: linear-gradient(0deg, #2f2f2f, #494949);
       }
 
       h1 {
@@ -55,23 +55,22 @@
       #popupForm {
                 /*RS / CS / RE / CE*/
         grid-area: 1 / 1 / 2 / 2;
-        background: linear-gradient(45deg, #2f2f2f, #494949);
       }
 
       #restoreSection {
                   /*RS / CS / RE / CE*/
         grid-area: 2 / 1 / 4 / 2;
-        background: linear-gradient(-45deg, #2f2f2f, #494949);
       }
 
       #backBtn {
-        margin-left: 15px;
+        margin-left: 1px;
         padding: 0px 15px;
       }
 
       #sessionTitle {
-        text-align: center;
+        text-align: left;
         font-weight: bold;
+        padding-left: 5px;
       }
 
       #list {
@@ -111,7 +110,7 @@
     <div class="wrapper">
       <div id="popupForm">
         <form action="/popup.html">
-          <button type="submit" id="backBtn"><img src="ic_arrow_back_white_18px.svg"></button>
+          <button type="submit" id="backBtn"><img src="ic_arrow_back_white_18px.svg"  style="vertical-align: middle;"></button>
         </form>
       </div>
       <div id="restoreSection">
@@ -122,8 +121,8 @@
           <select id="SessionList"></select>
         </div>
         <div id="Buttons">
-          <button id='restore'><img src="ic_restore_white_18px.svg"></button>
-          <button id='remove'><img src="ic_delete_white_18px.svg"></button>
+          <button id='restore'><img src="ic_restore_white_18px.svg"  style="vertical-align: middle;"></button>
+          <button id='remove'><img src="ic_delete_white_18px.svg"  style="vertical-align: middle;"></button>
         </div>
       </div>
     </div>

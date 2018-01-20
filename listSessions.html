@@ -18,83 +18,85 @@
         text-align: center;
       }
 
-    .wrapper {
-        display: grid;
-        grid-gap: 0px;
-        grid-template-columns: 200px;
-        grid-template-rows: 30px 30px 50px;
-    }
+      span {
+        color: white; 
+      }
 
-    #list {
-              /*RS / CS / RE / CE*/
-      grid-area: 2 / 1 / 3 / 2;
-      text-align: center;
-      margin: 6px;
-    }
 
-    #Buttons {
-      text-align: center;
-    }
+      form {
+        margin: 4px
+      }
 
-    #restore {
-              /*RS / CS / RE / CE*/
-      grid-area: 2 / 1 / 3 / 2;
-      margin: 3px;
-    }
-
-    #remove {
-              /*RS / CS / RE / CE*/
-      grid-area: 2 / 1 / 3 / 2;
-      margin: 3px;
-      
-    }
-
-    #popupForm {
-              /*RS / CS / RE / CE*/
-      grid-area: 1 / 1 / 2 / 2;
-      background: linear-gradient(45deg, #2f2f2f, #494949);
-    }
-
-    #restoreSection {
-                /*RS / CS / RE / CE*/
-      grid-area: 2 / 1 / 4 / 2;
-      background: linear-gradient(-45deg, #2f2f2f, #494949);
-    }
-
-    #sessionTitle {
-      text-align: center;
-    }
-
-    form {
-      margin: 4px
-    }
-
-    select {
-      background-color: #646464;
-      color: white;
-    }
-
-    button {
-        background-color: #646464; 
-        border: none;
-        border-radius: 3px;
+      select {
+        background-color: #646464;
         color: white;
-        padding: 2px 12px;
+      }
+
+      button {
+          background-color: #646464; 
+          border: none;
+          border-radius: 3px;
+          color: white;
+          padding: 2px 12px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 12px;
+      }
+
+      .wrapper {
+          display: grid;
+          grid-gap: 0px;
+          grid-template-columns: 200px;
+          grid-template-rows: 30px 30px 50px;
+      }
+
+
+      #popupForm {
+                /*RS / CS / RE / CE*/
+        grid-area: 1 / 1 / 2 / 2;
+        background: linear-gradient(45deg, #2f2f2f, #494949);
+      }
+
+      #restoreSection {
+                  /*RS / CS / RE / CE*/
+        grid-area: 2 / 1 / 4 / 2;
+        background: linear-gradient(-45deg, #2f2f2f, #494949);
+      }
+
+      #backBtn {
+        margin-left: 15px;
+        padding: 0px 15px;
+      }
+
+      #sessionTitle {
         text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 12px;
-    }
+        font-weight: bold;
+      }
 
-    #backBtn {
-      margin-left: 15px;
-      padding: 0px 15px;
-    }
+      #list {
+                /*RS / CS / RE / CE*/
+        grid-area: 2 / 1 / 3 / 2;
+        text-align: center;
+        margin: 6px;
+      }
 
-    span {
-      color: white; 
-    }
+      #Buttons {
+        text-align: center;
+      }
 
+      #restore {
+                /*RS / CS / RE / CE*/
+        grid-area: 2 / 1 / 3 / 2;
+        margin: 3px;
+      }
+
+      #remove {
+                /*RS / CS / RE / CE*/
+        grid-area: 2 / 1 / 3 / 2;
+        margin: 3px;
+        
+      }
     </style>   
     
     <!-- ROBOTO FONT -->
@@ -114,7 +116,7 @@
       </div>
       <div id="restoreSection">
         <div id="sessionTitle">
-          <span>Session List</span>
+          <span>Sessionlist</span>
         </div>
         <div id="list">
           <select id="SessionList"></select>

@@ -18,75 +18,76 @@
         text-align: center;
       }
 
-    .wrapper {
-        display: grid;
-        grid-gap: 0px;
-        grid-template-columns: 200px;
-        grid-template-rows: 15px 40px 15px 40px;
-    }
+      span {
+        color: white; 
+      }
 
-    #saveTitle {
+      input {
+        width: 100px;
+     }
+
+      button {
+        background-color: #646464; 
+        border: none;
+        border-radius: 3px;
+        color: white;
+        padding: 5px 12px;
+        margin: 5px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+      }
+
+      .wrapper {
+          display: grid;
+          grid-gap: 0px;
+          grid-template-columns: 200px;
+          grid-template-rows: 15px 40px 15px 40px;
+      }
+
+      #restoreSection {
+                /*RS / CS / RE / CE*/
+        grid-area: 1 / 1 / 3 / 2;
+        background: linear-gradient(45deg, #2f2f2f, #494949);
+        text-align: center;
+      }
+
+      #storeSection {
+                /*RS / CS / RE / CE*/
+        grid-area: 3 / 1 / 5 / 2;
+        background: linear-gradient(-45deg, #2f2f2f, #494949);
+      }
+
+      #saveTitle {
+                /*RS / CS / RE / CE*/
+        grid-area: 3 / 1 / 4 / 2;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      #saveForm {
+        /*RS / CS / RE / CE*/
+        grid-area: 4 / 1 / 5 / 2;
+        text-align: center;
+      }
+
+      #savebtn {
               /*RS / CS / RE / CE*/
-      grid-area: 3 / 1 / 4 / 2;
-      text-align: center;
-    }
+        grid-area: 4 / 2 / 5 / 3;
+      }
 
-    #saveForm {
-      /*RS / CS / RE / CE*/
-      grid-area: 4 / 1 / 5 / 2;
-      text-align: center;
-    }
-
-    #savebtn {
-            /*RS / CS / RE / CE*/
-      grid-area: 4 / 2 / 5 / 3;
-    }
-
-    #restoreTitle {
-            /*RS / CS / RE / CE*/
-      grid-area: 1 / 1 / 2 / 2;
-
-    }
-
-    #restoreForm {
+      #restoreTitle {
               /*RS / CS / RE / CE*/
-      grid-area: 2 / 1 / 3 / 2;
-      
-    }
+        grid-area: 1 / 1 / 2 / 2;
+        font-weight: bold;
+      }
 
-    #restoreSection {
-              /*RS / CS / RE / CE*/
-      grid-area: 1 / 1 / 3 / 2;
-      background: linear-gradient(45deg, #2f2f2f, #494949);
-      text-align: center;
-    }
-
-    #storeSection {
-              /*RS / CS / RE / CE*/
-      grid-area: 3 / 1 / 5 / 2;
-      background: linear-gradient(-45deg, #2f2f2f, #494949);
-    }
-   
-   span {
-      color: white; 
-    }
-
-    input {
-      width: 100px;
-    }
-
-    button {
-      background-color: #646464; 
-      border: none;
-      border-radius: 3px;
-      color: white;
-      padding: 5px 12px;
-      margin: 5px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 12px;
-    }
+      #restoreForm {
+                /*RS / CS / RE / CE*/
+        grid-area: 2 / 1 / 3 / 2;
+        
+      }
     </style>  
 
     <!-- ROBOTO FONT -->
@@ -98,6 +99,16 @@
   <body>
     <h1>Tab Store</h1>
     <div class="wrapper">
+      <div id="restoreSection">
+        <div id="restoreTitle">
+          <span>Restore Session</span>
+        </div>
+        <div id="restoreForm">
+          <form action="/listSessions.html">
+            <button type="submit">List Saved Sessions</button>
+          </form>
+        </div>
+      </div> 
       <div id="storeSection">
         <div id="saveTitle">
           <span>Save Current Session</span>
@@ -109,16 +120,6 @@
           </form>
         </div>
       </div>
-      <div id="restoreSection">
-        <div id="restoreTitle">
-          <span>Restore Session</span>
-        </div>
-        <div id="restoreForm">
-          <form action="/listSessions.html">
-            <button type="submit">List Saved Sessions</button>
-          </form>
-        </div>
-      </div> 
     </div>
   </body>
 </html>

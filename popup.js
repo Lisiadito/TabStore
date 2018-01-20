@@ -1,30 +1,19 @@
 function getAllUrls(sessionName) {
-  const queryInfo = {
-    currentWindow: true
-  };
-
-  chrome.tabs.query(queryInfo,function(tabs){    
+  chrome.tabs.query({currentWindow: true}, tabs => {    
     let tabUrls = []
-    tabs.forEach(tab => {
-      tabUrls.push(tab.url)
-    }) 
+    tabs.forEach(tab => tabUrls.push(tab.url)) 
     saveSession(sessionName, tabUrls)
  })
 }
 
 function saveSession(sessionName, tabs) {
-  let session = {}
-  session[sessionName] = tabs
-  chrome.storage.sync.set(session)
+  chrome.storage.sync.set({[sessionName]:tabs})
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  let saveButton = document.getElementById('savebtn')
-  
+  const saveButton = document.getElementById('savebtn')
   saveButton.addEventListener('click', () => {
     const sessionName = document.getElementById('sessionname').value
-    if(sessionName) {
-      getAllUrls(sessionName) 
-    }
+    sessionName ? getAllUrls(sessionName) : null
   })
 })
